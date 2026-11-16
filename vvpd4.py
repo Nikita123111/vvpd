@@ -30,3 +30,27 @@ def main():
         print("5 - Выход")
 
         choice = input("Выберите действие: ")
+        if choice == "5":
+            break
+        if choice == "1":
+            a,b = get_size()
+        if choice == "2":
+            if a == 0 or b == 0:
+                print("Сначала введите размер массива в пункте 1")
+                continue
+            print("1 - Вручную")
+            print("2 - Автоматически (случайные числа от 0 до 100)")
+            print("0 - Назад")
+            choice1 = input("Выберите действие: ")
+            if choice1 == "0":
+                continue
+            if choice1 == "1":
+                arr = hands(a,b)
+            if choice1 == "2":
+                arr = auto(a,b)
+        if choice == "3":
+            if arr is None:
+                print("Сначала заполните массив в пункте 2")
+                continue
+            print("Массив:")
+            print(arr)

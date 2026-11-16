@@ -29,7 +29,11 @@ def f6(arr):
     for i in range(len(col_s)):
         print(f"Сумма {n} столбца равна {col_s[i]}")
         n += 1
-        
+
+def f9(arr):
+    s = triu(arr, k=1).sum()
+    print(f"Сумма элементов выше главной диагонали: {s}")
+    
 def main():
     a, b = 0, 0
     arr = None

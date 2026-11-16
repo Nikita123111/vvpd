@@ -47,6 +47,15 @@ def f17(arr):
     new_arr = sort(arr, axis=0)
     print("Матрица c упорядоченными по возрастанию элементами каждого столбца:")
     print(new_arr)
+
+def f20(arr):
+    n = 1
+    m = []
+    for string in arr:
+        s = sum(string)
+        m.append([int(s),n])
+        n += 1
+    print(f"Строка с наибольшей суммой элементов: {sorted(m)[-1][1]}")
     
 def main():
     a, b = 0, 0

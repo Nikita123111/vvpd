@@ -18,6 +18,18 @@ def auto(a,b):
     print("Массив создан")
     return arr
 
+def f6(arr):
+    n = 1
+    for string in arr:
+        s = sum(string)
+        print(f"Сумма {n} строки равна {s}")
+        n += 1
+    n = 1
+    col_s = sum(arr,axis=0)
+    for i in range(len(col_s)):
+        print(f"Сумма {n} столбца равна {col_s[i]}")
+        n += 1
+        
 def main():
     a, b = 0, 0
     arr = None

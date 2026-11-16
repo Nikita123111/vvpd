@@ -33,7 +33,16 @@ def f6(arr):
 def f9(arr):
     s = triu(arr, k=1).sum()
     print(f"Сумма элементов выше главной диагонали: {s}")
-    
+
+def f12(arr):
+    c = 0
+    arr = triu(arr, k=1)
+    for i in arr:
+        for j in i:
+            if j>0:
+                c += 1
+    print(f"Количество положительных элементов массива, расположенных выше главной диагонали: {c}")
+
 def main():
     a, b = 0, 0
     arr = None
